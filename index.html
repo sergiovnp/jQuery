@@ -8,9 +8,28 @@
 </head>
 <body>
     <h1>Hola jQuery!</h1>
+
+    <a href="https://www.google.com">Esto es un enlace!</a>
     
 
+<!-- Escuchar eventos del DOM -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            console.log('DOM Cargado');
+        });
 
+    /* Iniciar event listener sobre elemento HTML */
+    var enlace = document.querySelector('a');
+    console.log(enlace);
+    enlace.addEventListener('click', function(event){
+        event.preventDefault();
+        console.log('click');
+
+    });
+
+    </script>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
